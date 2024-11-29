@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label>Demander un Devis</label>
+        <name>Request_a_Quote</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre demande à été envoyée</label>
+        <name>Request_a_Quote_Sent</name>
+    </customLabels>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Buyer_Request_Quote</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Buyer_Request_Quote_Input_Representation_Status_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>FeedMessage</name>
+            </textTemplates>
+        </flows>
+        <fullName>Buyer_Request_Quote_Submit</fullName>
+    </flowDefinitions>
+</Translations>

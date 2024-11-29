@@ -1,0 +1,41 @@
+<template lwc:render-mode="light">
+    <template if:false={isEmpty}>
+        <div class="slds-p-around_medium">
+            <header class="slds-p-vertical_x-small">
+                <slot name="headerText"></slot>
+            </header>
+            <template if:false={isSuccess}>
+                <template if:true={isLoading}>
+                    <div class="slds-is-relative slds-align_absolute-center">
+                        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                    </div>
+                </template>                
+                <div class="slds-align_absolute-center">
+                    <lightning-button variant="brand" label={buttonLabel} title="Request a Quote" onclick={handleClick} disabled={disableButton} class="slds-button_stretch"></lightning-button>
+                </div>        
+            </template>
+        </div>
+        <template if:true={isSuccess}>
+            <div class="slds-p-around_medium">
+                <header class="slds-p-vertical_x-small">
+                    <slot name="successText"></slot>
+                </header>
+            </div>
+        </template>
+        <template if:true={isPreview}>
+            <div class="slds-p-around_medium">
+                <header class="slds-p-vertical_x-small">
+                    <slot name="successText"></slot>
+                </header>
+            </div>
+        </template>        
+        <template if:true={runFlow}>
+            <lightning-flow
+                flow-api-name='Buyer_Request_Quote'
+                flow-input-variables={flowInputVariables}
+                onstatuschange={handleFlowStatusChange}
+            >
+            </lightning-flow>
+        </template>
+    </template>
+</template>

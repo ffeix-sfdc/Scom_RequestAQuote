@@ -1,0 +1,16 @@
+.slds-button_stretch Button{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Toast background color */
+.slds-notify_container .slds-notify_toast {
+    background-color: white;
+    
+}
+/* Toast icon color */
+.slds-notify_container .slds-notify_toast .slds-icon {
+    fill: #13B981;
+}

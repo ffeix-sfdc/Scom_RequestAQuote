@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Buyer Request A Quote</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="buttonLabel" type="String" label="Button Label" default="{!Label.c.Request_a_Quote}"/>
+            <property name="toastSuccessMsg" type="String" label="Toast Success Message" default="{!Label.c.Request_a_Quote_Sent}"/>
+            <property name="cartId" type="String" label="Cart ID" default="{!Cart.Details.cartId}"/>
+            <property name="uniqueProductCount" type="String" label="Unique Product Count" default="{!Cart.Details.uniqueProductCount}"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
